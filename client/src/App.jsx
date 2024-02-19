@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import { Container, TextField, Typography, Button,Box, Stack } from "@mui/material";
 
 const App = () => {
-  const socket = useMemo(()=> io("http://localhost:3000" ,{withCredentials:true,}),[]);
+  // const socket = useMemo(()=> io("http://localhost:3000" ,{withCredentials:true,}),[]);
+  const socket = useMemo(()=> io("https://tic-tac-3hah.onrender.com/" ,{withCredentials:true,}),[]);
+
 
   const [message, SetMessage] = useState("");
   const [room,SetRoom] = useState("");
